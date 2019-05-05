@@ -80,19 +80,27 @@ Public Class FormularioFuncionesSOCIO
         'Preparamos la instruccion
         Dim strSQL As String
         Dim dbComm As OleDbCommand
+        Dim correcto As Boolean = True
         strSQL = "update socio set credito = credito + ? where usuarioLogin=?"
         dbComm = New OleDbCommand(strSQL, conexion)
         Dim aumentocredito As Double
-        aumentocredito = CDbl(cantidadEuros.Text)
-        dbComm.Parameters.Add(New OleDbParameter("credit", OleDbType.Double)).Value = aumentocredito
-        dbComm.Parameters.Add(New OleDbParameter("user", OleDbType.VarChar)).Value = usuario
-        'ejecutar
         Try
-            dbComm.ExecuteNonQuery()
-            MsgBox("Se ha aumentado el crédito correctamente")
-        Catch exsql As Exception
-            MsgBox("Error al aumentar el crédito")
+            aumentocredito = CDbl(cantidadEuros.Text)
+        Catch except As Exception
+            MsgBox("Introduzca un crédito válido.")
+            correcto = False
         End Try
+        If correcto Then
+            dbComm.Parameters.Add(New OleDbParameter("credit", OleDbType.Double)).Value = aumentocredito
+            dbComm.Parameters.Add(New OleDbParameter("user", OleDbType.VarChar)).Value = usuario
+            'ejecutar
+            Try
+                dbComm.ExecuteNonQuery()
+                MsgBox("Se ha aumentado el crédito correctamente")
+            Catch exsql As Exception
+                MsgBox("Error al aumentar el crédito")
+            End Try
+        End If
         'Apagamos conexion
         If conexion.State = ConnectionState.Open Then
             conexion.Close()
