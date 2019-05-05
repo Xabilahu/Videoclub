@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{0FAA3646-27B8-408C-83B3-8FFF28565004}|">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ApliWebVideoClub" expanded="True">
+            <Node name="ApliWebVideoClub" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="About.aspx" expanded="True" />
+              <Node name="FormularioFuncionesADM.aspx" expanded="True" />
+              <Node name="Site.Master" expanded="True">
+                <Node name="Site.Master.vb" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ApliWebVideoClub PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
