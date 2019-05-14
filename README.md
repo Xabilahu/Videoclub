@@ -1,2 +1,2 @@
 # Videoclub
-2nd grade Databases subject project
+Databases subject project
